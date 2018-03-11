@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RawDataRefactored", "RawDataRefactored\RawDataRefactored.csproj", "{EBCE17D6-98CA-4843-A38A-AA0501D2401D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBCE17D6-98CA-4843-A38A-AA0501D2401D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBCE17D6-98CA-4843-A38A-AA0501D2401D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBCE17D6-98CA-4843-A38A-AA0501D2401D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBCE17D6-98CA-4843-A38A-AA0501D2401D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81D15528-022A-476E-92FC-58C44620A870}
+	EndGlobalSection
+EndGlobal

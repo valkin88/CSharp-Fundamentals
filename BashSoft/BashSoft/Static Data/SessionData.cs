@@ -1,4 +1,7 @@
-﻿using System.IO;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
 
 namespace BashSoft
 {
@@ -6,4 +9,5 @@ namespace BashSoft
     {
         public static string currentPath = Directory.GetCurrentDirectory();
     }
+    
 }
