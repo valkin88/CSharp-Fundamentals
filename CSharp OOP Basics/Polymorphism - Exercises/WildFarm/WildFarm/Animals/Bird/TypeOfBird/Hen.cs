@@ -2,7 +2,7 @@
 
 public class Hen : Bird
 {
-    private const double weightIncrease = 0.35;
+    private const double WeightIncrease = 0.35;
 
     public Hen(string name, double weight, double wingSize)
         : base(name, weight, wingSize)
@@ -11,7 +11,7 @@ public class Hen : Bird
 
     public override void EatFood(Food food)
     {
-        this.Weight += food.Quantity * weightIncrease;
+        this.Weight += food.Quantity * WeightIncrease;
         this.FoodEaten += food.Quantity;
     }
 
