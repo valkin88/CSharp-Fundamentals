@@ -2,7 +2,7 @@
 
 public class Mouse : Mammal
 {
-    private const double weightIncrease = 0.10;
+    private const double WeightIncrease = 0.10;
 
     public Mouse(string name, double weight, string livingRegion) 
         : base(name, weight, livingRegion)
@@ -13,7 +13,7 @@ public class Mouse : Mammal
     {
         if ((food is Vegetable) || (food is Fruit))
         {
-            this.Weight += food.Quantity * weightIncrease;
+            this.Weight += food.Quantity * WeightIncrease;
             this.FoodEaten += food.Quantity;
         }
         else
