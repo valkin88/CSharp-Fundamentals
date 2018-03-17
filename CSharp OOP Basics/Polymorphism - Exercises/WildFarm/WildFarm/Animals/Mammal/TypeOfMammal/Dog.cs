@@ -2,7 +2,7 @@
 
 public class Dog : Mammal
 {
-    private const double weightIncrease = 0.40;
+    private const double WeightIncrease = 0.40;
 
     public Dog(string name, double weight, string livingRegion)
         : base(name, weight, livingRegion)
@@ -13,7 +13,7 @@ public class Dog : Mammal
     {
         if (food is Meat)
         {
-            this.Weight += food.Quantity * weightIncrease;
+            this.Weight += food.Quantity * WeightIncrease;
             this.FoodEaten += food.Quantity;
         }
         else
