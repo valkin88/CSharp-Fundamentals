@@ -4,7 +4,7 @@ using System.Text;
 
 public class Car
 {
-    private const string offset = "  ";
+    private const string Offset = "  ";
 
     public string model;
     public Engine engine;
@@ -25,8 +25,8 @@ public class Car
         StringBuilder sb = new StringBuilder();
         sb.AppendFormat("{0}:\n", this.model);
         sb.Append(this.engine.ToString());
-        sb.AppendFormat("{0}Weight: {1}\n", offset, this.weight == -1 ? "n/a" : this.weight.ToString());
-        sb.AppendFormat("{0}Color: {1}", offset, this.color);
+        sb.AppendFormat("{0}Weight: {1}\n", Offset, this.weight == -1 ? "n/a" : this.weight.ToString());
+        sb.AppendFormat("{0}Color: {1}", Offset, this.color);
 
         return sb.ToString();
     }
