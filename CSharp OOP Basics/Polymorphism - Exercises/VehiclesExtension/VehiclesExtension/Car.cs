@@ -2,7 +2,7 @@
 
 public class Car : Vehicle
 {
-    private const double summerConsumption = 0.9;
+    private const double SummerConsumption = 0.9;
 
     public Car(string type, double fuelQuantity, double consumptionPerKm, double tankCapacity) : base(type, fuelQuantity, consumptionPerKm, tankCapacity)
     {
@@ -10,7 +10,7 @@ public class Car : Vehicle
 
     public override void Drive(double distance)
     {
-        double fuelNeeded = distance * (this.ConsumptionPerKm + summerConsumption);
+        double fuelNeeded = distance * (this.ConsumptionPerKm + SummerConsumption);
 
         if (fuelNeeded > this.FuelQuantity)
         {
