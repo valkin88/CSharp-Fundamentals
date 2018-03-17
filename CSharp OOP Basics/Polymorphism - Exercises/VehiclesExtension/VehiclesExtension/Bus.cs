@@ -2,7 +2,7 @@
 
 public class Bus : Vehicle
 {
-    private const double airConditionarConsumption = 1.4;
+    private const double AirConditionarConsumption = 1.4;
 
     public Bus(string type, double fuelQuantity, double consumptionPerKm, double tankCapacity) : base(type, fuelQuantity, consumptionPerKm, tankCapacity)
     {
@@ -16,7 +16,7 @@ public class Bus : Vehicle
         }
         else
         {
-            Drive(distance, base.ConsumptionPerKm + airConditionarConsumption);
+            Drive(distance, base.ConsumptionPerKm + AirConditionarConsumption);
         } 
     }
 
