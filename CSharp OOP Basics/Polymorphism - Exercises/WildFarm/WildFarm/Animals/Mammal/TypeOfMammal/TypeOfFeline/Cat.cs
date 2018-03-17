@@ -2,7 +2,7 @@
 
 public class Cat : Feline
 {
-    private const double weightIncrease = 0.30;
+    private const double WeightIncrease = 0.30;
 
     public Cat(string name, double weight, string livingRegion, string breed)
         : base(name, weight, livingRegion, breed)
@@ -13,7 +13,7 @@ public class Cat : Feline
     {
         if ((food is Meat) || (food is Vegetable))
         {
-            this.Weight += food.Quantity * weightIncrease;
+            this.Weight += food.Quantity * WeightIncrease;
             this.FoodEaten += food.Quantity;
         }
         else
