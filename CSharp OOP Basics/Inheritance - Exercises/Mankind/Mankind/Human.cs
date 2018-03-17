@@ -4,8 +4,8 @@ using System.Text;
 
 public class Human
 {
-    private const int firstNameMinLenght = 4;
-    private const int lastNameMinLenght = 3;
+    private const int FirstNameMinLenght = 4;
+    private const int LastNameMinLenght = 3;
     private string firstName;
     private string lastName;
 
@@ -14,7 +14,7 @@ public class Human
         get { return firstName; }
         set
         {
-            Validator.ValidateName(value, nameof(firstName), firstNameMinLenght);
+            Validator.ValidateName(value, nameof(firstName), FirstNameMinLenght);
             firstName = value;
         }
     }
@@ -24,7 +24,7 @@ public class Human
         get { return lastName; }
         set
         {
-            Validator.ValidateName(value, nameof(lastName), lastNameMinLenght);
+            Validator.ValidateName(value, nameof(lastName), LastNameMinLenght);
             lastName = value;
         }
     }
