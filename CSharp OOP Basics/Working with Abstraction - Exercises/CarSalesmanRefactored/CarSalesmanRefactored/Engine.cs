@@ -4,7 +4,7 @@ using System.Text;
 
 public class Engine
 {
-    private const string offset = "  ";
+    private const string Offset = "  ";
 
     public string model;
     public int power;
@@ -25,10 +25,10 @@ public class Engine
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.AppendFormat("{0}{1}:\n", offset, this.model);
-        sb.AppendFormat("{0}{0}Power: {1}\n", offset, this.power);
-        sb.AppendFormat("{0}{0}Displacement: {1}\n", offset, this.displacement == -1 ? "n/a" : this.displacement.ToString());
-        sb.AppendFormat("{0}{0}Efficiency: {1}\n", offset, this.efficiency);
+        sb.AppendFormat("{0}{1}:\n", Offset, this.model);
+        sb.AppendFormat("{0}{0}Power: {1}\n", Offset, this.power);
+        sb.AppendFormat("{0}{0}Displacement: {1}\n", Offset, this.displacement == -1 ? "n/a" : this.displacement.ToString());
+        sb.AppendFormat("{0}{0}Efficiency: {1}\n", Offset, this.efficiency);
 
         return sb.ToString();
     }
