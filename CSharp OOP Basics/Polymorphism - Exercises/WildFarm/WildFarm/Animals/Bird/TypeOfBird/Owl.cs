@@ -2,7 +2,7 @@
 
 public class Owl : Bird
 {
-    private const double weightIncrease = 0.25;
+    private const double WeightIncrease = 0.25;
 
     public Owl(string name, double weight, double wingSize)
         : base(name, weight, wingSize)
@@ -13,7 +13,7 @@ public class Owl : Bird
     {
         if (food is Meat)
         {
-            this.Weight += food.Quantity * weightIncrease;
+            this.Weight += food.Quantity * WeightIncrease;
             this.FoodEaten += food.Quantity;
         }
         else
