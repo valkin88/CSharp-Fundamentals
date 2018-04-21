@@ -68,15 +68,4 @@ public class CommandInterpreter : ICommandInterpreter
 
         return instance;
     }
-
-    private void SetFields(ICommand command, PropertyInfo[] commandPropertyInfos, PropertyInfo[] interpreterPropertyInfos)
-    {
-        foreach (var fieldinfo in commandPropertyInfos)
-        {
-            if (interpreterPropertyInfos.Any(f => f.PropertyType == fieldinfo.PropertyType))
-            {
-                fieldinfo.SetValue(command, interpreterPropertyInfos.First(x => x.PropertyType.Name == fieldinfo.PropertyType.Name).GetValue(this));
-            }
-        }
-    }
 }
