@@ -2,7 +2,7 @@
 {
     using StorageMaster.Entities.Products;
     using StorageMaster.Entities.Vehicles;
-    using StorageMaster.Constats;
+    using StorageMaster.Constants;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -53,12 +53,12 @@
         {
             if (garageSlot >= this.GarageSlots)
             {
-                throw new InvalidOperationException(Constats.InvalidGarageSlot);
+                throw new InvalidOperationException(Constants.InvalidGarageSlot);
             }
 
             if (this.arrayOfVehicles[garageSlot] == null)
             {
-                throw new InvalidOperationException(Constats.NoVehicleFound);
+                throw new InvalidOperationException(Constants.NoVehicleFound);
             }
 
             Vehicle vehicle = this.arrayOfVehicles[garageSlot];
@@ -96,7 +96,7 @@
 
             if (isItFull == true)
             {
-                throw new InvalidOperationException(Constats.NoRoomInGarage);
+                throw new InvalidOperationException(Constants.NoRoomInGarage);
             }
 
             return indexOfSlot;
@@ -106,7 +106,7 @@
         {
             if (this.IsFull)
             {
-                throw new InvalidOperationException(Constats.StorageIsFull);
+                throw new InvalidOperationException(Constants.StorageIsFull);
             }
 
             Vehicle vehicle = this.GetVehicle(garageSlot);

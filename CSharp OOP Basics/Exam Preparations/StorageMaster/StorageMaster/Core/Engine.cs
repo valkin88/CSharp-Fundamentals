@@ -2,7 +2,7 @@
 {
     using System;
     using System.Linq;
-    using global::StorageMaster.Constats;
+    using global::StorageMaster.Constants;
 
     public class Engine
     {
@@ -36,7 +36,7 @@
                 }
                 catch (InvalidOperationException ex)
                 {
-                    Console.WriteLine(string.Format(Constats.ErrorMessage, ex.Message));
+                    Console.WriteLine(string.Format(Constants.ErrorMessage, ex.Message));
                 }
                 
             }

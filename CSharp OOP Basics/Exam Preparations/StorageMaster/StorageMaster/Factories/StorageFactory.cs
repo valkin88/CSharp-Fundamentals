@@ -1,7 +1,7 @@
 ﻿namespace StorageMaster.Factories
 {
     using StorageMaster.Entities.Storage;
-    using StorageMaster.Constats;
+    using StorageMaster.Constants;
     using System;
 
     public class StorageFactory
@@ -17,7 +17,7 @@
                 case "Warehouse":
                     return new Warehouse(name);
                 default:
-                    throw new InvalidOperationException(Constats.InvalidStorageType);
+                    throw new InvalidOperationException(Constants.InvalidStorageType);
             }
         }
     }

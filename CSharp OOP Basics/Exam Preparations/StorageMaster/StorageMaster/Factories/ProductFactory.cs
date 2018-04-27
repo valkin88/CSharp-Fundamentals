@@ -1,7 +1,7 @@
 ﻿namespace StorageMaster.Factories
 {
     using StorageMaster.Entities.Products;
-    using StorageMaster.Constats;
+    using StorageMaster.Constants;
     using System;
 
     public class ProductFactory
@@ -23,7 +23,7 @@
                     return new SolidStateDrive(priceOfProduct);
 
                 default:
-                    throw new InvalidOperationException(Constats.InvalidProductType);
+                    throw new InvalidOperationException(Constants.InvalidProductType);
             }
         }
     }

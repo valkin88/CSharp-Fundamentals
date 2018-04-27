@@ -4,7 +4,7 @@
     using global::StorageMaster.Entities.Storage;
     using global::StorageMaster.Entities.Vehicles;
     using global::StorageMaster.Factories;
-    using global::StorageMaster.Constats;
+    using global::StorageMaster.Constants;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -35,7 +35,7 @@
 
             this.products.Add(product);
 
-            return string.Format(Constats.AddProduct, type);
+            return string.Format(Constants.AddProduct, type);
         }
 
         public string RegisterStorage(string type, string name)
@@ -44,7 +44,7 @@
 
             this.storage.Add(storage);
 
-            return string.Format(Constats.RegisterStorage, name);
+            return string.Format(Constants.RegisterStorage, name);
         }
 
         public string SelectVehicle(string storageName, int garageSlot)
@@ -56,7 +56,7 @@
 
             string typeOfVehicle = this.currentVehicle.GetType().Name;
 
-            return string.Format(Constats.SelectVehicle, typeOfVehicle);
+            return string.Format(Constants.SelectVehicle, typeOfVehicle);
         }
 
         public string LoadVehicle(IEnumerable<string> productNames)
@@ -81,33 +81,33 @@
                 }
                 else
                 {
-                    throw new InvalidOperationException(string.Format(Constats.ProductOutOfStock, product));
+                    throw new InvalidOperationException(string.Format(Constants.ProductOutOfStock, product));
                 }
             }
 
             string typeOfCurrentVehicle = this.currentVehicle.GetType().Name;
             int countOfProductsToLoad = productNames.Count();
 
-            return string.Format(Constats.LoadVehicle, loadedProductsCount, countOfProductsToLoad, typeOfCurrentVehicle);
+            return string.Format(Constants.LoadVehicle, loadedProductsCount, countOfProductsToLoad, typeOfCurrentVehicle);
         }
 
         public string SendVehicleTo(string sourceName, int sourceGarageSlot, string destinationName)
         {
             if (!this.storage.Any(s => s.Name == sourceName))
             {
-                throw new InvalidOperationException(Constats.InvalidSourceStorage);
+                throw new InvalidOperationException(Constants.InvalidSourceStorage);
             }
 
             if (!this.storage.Any(s => s.Name == destinationName))
             {
-                throw new InvalidOperationException(Constats.InvalidDestinationStorage);
+                throw new InvalidOperationException(Constants.InvalidDestinationStorage);
             }
 
             var vehicleToMove = this.storage.First(s => s.Name == sourceName).GetVehicle(sourceGarageSlot);
             int destinationGarageSlot = this.storage.First(s => s.Name == sourceName).SendVehicleTo(sourceGarageSlot, this.storage.First(s => s.Name == destinationName));
             string typeOfVehicle = vehicleToMove.GetType().Name;
 
-            return string.Format(Constats.SendVehicleTo, typeOfVehicle, destinationName, destinationGarageSlot);
+            return string.Format(Constants.SendVehicleTo, typeOfVehicle, destinationName, destinationGarageSlot);
         }
 
         public string UnloadVehicle(string storageName, int garageSlot)
@@ -119,7 +119,7 @@
             
             var currentStorage = this.storage.FirstOrDefault(s => s.Name == storageName);
 
-            return string.Format(Constats.UnloadVehicle, unloadedProductsCount, productsInVehicle, currentStorage.Name);
+            return string.Format(Constants.UnloadVehicle, unloadedProductsCount, productsInVehicle, currentStorage.Name);
         }
 
         public string GetStorageStatus(string storageName)
@@ -137,11 +137,11 @@
 
             foreach (var s in storageOutput)
             {
-                builder.AppendLine(string.Format(Constats.NameOfStorage, s.Name));
+                builder.AppendLine(string.Format(Constants.NameOfStorage, s.Name));
 
                 double sumOfProductsPrice = s.Products.Sum(x => x.Price);
 
-                builder.AppendLine(string.Format(Constats.StorageWorth,sumOfProductsPrice));
+                builder.AppendLine(string.Format(Constants.StorageWorth,sumOfProductsPrice));
             }
 
             return builder.ToString().Trim();

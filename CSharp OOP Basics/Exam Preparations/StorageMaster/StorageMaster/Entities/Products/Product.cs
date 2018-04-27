@@ -1,7 +1,7 @@
 ﻿namespace StorageMaster.Entities.Products
 {
     using System;
-    using StorageMaster.Constats;
+    using StorageMaster.Constants;
 
     public abstract class Product
     {
@@ -20,7 +20,7 @@
             {
                 if (value < 0)
                 {
-                    throw new InvalidOperationException(Constats.PriceCannotBeNegative);
+                    throw new InvalidOperationException(Constants.PriceCannotBeNegative);
                 }
                 price = value;
             }

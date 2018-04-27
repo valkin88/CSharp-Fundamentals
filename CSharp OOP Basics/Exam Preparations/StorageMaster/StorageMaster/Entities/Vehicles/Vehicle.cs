@@ -1,7 +1,7 @@
 ﻿namespace StorageMaster.Entities.Vehicles
 {
     using StorageMaster.Entities.Products;
-    using StorageMaster.Constats;
+    using StorageMaster.Constants;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -28,7 +28,7 @@
         {
             if (this.IsFull)
             {
-                throw new InvalidOperationException(Constats.VehicleIsFull);
+                throw new InvalidOperationException(Constants.VehicleIsFull);
             }
 
             this.listOfProducts.Add(product);
@@ -38,7 +38,7 @@
         {
             if (this.IsEmpty)
             {
-                throw new InvalidOperationException(Constats.NoProductsInVehicle);
+                throw new InvalidOperationException(Constants.NoProductsInVehicle);
             }
 
             Product product = this.listOfProducts.Last();

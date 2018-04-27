@@ -1,7 +1,7 @@
 ﻿namespace StorageMaster.Factories
 {
     using StorageMaster.Entities.Vehicles;
-    using StorageMaster.Constats;
+    using StorageMaster.Constants;
     using System;
 
     public class VehicleFactory
@@ -17,7 +17,7 @@
                 case "Van":
                     return new Van();
                 default:
-                    throw new InvalidOperationException(Constats.InvalidVehicleType);
+                    throw new InvalidOperationException(Constants.InvalidVehicleType);
             }
         }
     }
