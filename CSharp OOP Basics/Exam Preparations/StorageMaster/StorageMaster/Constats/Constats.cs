@@ -1,6 +1,6 @@
-﻿namespace StorageMaster.Constats
+﻿namespace StorageMaster.Constants
 {
-    public static class Constats
+    public static class Constants
     {
         public const string AddProduct = "Added {0} to pool";
 
